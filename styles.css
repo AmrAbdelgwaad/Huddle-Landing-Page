@@ -1,0 +1,228 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --white-clr: hsl(0, 0%, 100%);
+
+  --ff-poppins: "Poppins", sans-serif;
+  --ff-open-sans: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--Violet) url(images/bg-mobile.svg);
+  color: var(--white-clr);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo {
+  max-width: 7rem;
+  margin: 2rem 5rem 2rem 2rem;
+}
+
+.mockups {
+  max-width: 17rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+p {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 4rem;
+  font-family: var(--ff-poppins);
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+
+p {
+  margin-top: 1.5rem;
+  font-family: var(--ff-open-sans);
+  padding: 0 2.8rem;
+}
+
+button {
+  border: none;
+  font-family: var(--ff-poppins);
+  color: var(--Violet);
+  padding: 0.5rem 4rem;
+  background-color: var(--white-clr);
+  border-radius: 1rem;
+  box-shadow: -3px 3px 33px 0 rgba(0, 0, 0, 0.29);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Soft-Magenta);
+  color: var(--white-clr);
+}
+
+.social-icons {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.facebook {
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  background-color: white;
+  -webkit-mask: url(icons/facebook-f.svg) no-repeat center;
+  mask: url(icons/facebook-f.svg) no-repeat center;
+}
+
+.social-icons .facebook:hover {
+  background-color: var(--Soft-Magenta);
+}
+
+.instagram {
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  background-color: white;
+  -webkit-mask: url(icons/instagram.svg) no-repeat center;
+  mask: url(icons/instagram.svg) no-repeat center;
+}
+
+.social-icons .instagram:hover {
+  background-color: var(--Soft-Magenta);
+}
+
+.twitter {
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  background-color: white;
+  -webkit-mask: url(icons/twitter.svg) no-repeat center;
+  mask: url(icons/twitter.svg) no-repeat center;
+}
+
+.social-icons .twitter:hover {
+  background-color: var(--Soft-Magenta);
+}
+
+@media (min-width: 50rem) {
+  body {
+    background: var(--Violet) url(images/bg-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    max-width: 13rem;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+  }
+
+  .mockups {
+    max-width: 100%;
+    margin-left: 4rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin: 2rem 5rem 0 7rem;
+  }
+
+  p {
+    text-align: left;
+    margin: 1rem 2.5rem 1.5rem 7rem;
+    padding: 0;
+  }
+
+  .btn-wrap {
+    text-align: left;
+    margin-left: 7rem;
+  }
+
+  button {
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+  }
+
+  .social-icons {
+    justify-content: end;
+    margin: 4rem 4rem 2rem 0 ;
+  }
+
+  .social-icons div{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
