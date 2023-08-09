@@ -13,7 +13,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 ### Live preview
 
 
-[click here](https://your-live-site-url.com)
+[click here](https://amrabdelgwaad.github.io/Huddle-Landing-Page/)
 
 
 
